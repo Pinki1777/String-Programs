@@ -1,6 +1,15 @@
 import java.util.*;
 class Day7  {
    
+     /****************** 1. ***************** */
+
+    static int StringLength(char[] str,int i)    {
+            if(i==str.length)    {
+                return 0;  
+            }
+                return 1 + StringLength(str,i+1);
+    }	
+	
      /****************** 2. ***************** */
 
     static long print_factorial(int x)  {
@@ -44,6 +53,8 @@ class Day7  {
        // printfact(a);
        // fibonacci(a,0,1);
        // print_table(a,1);
-      
+          String s=sc.nextLine();
+          char[] a=s.toCharArray();
+          System.out.println(StringLength(a,0));
     }
 }
